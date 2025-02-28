@@ -73,4 +73,6 @@ jobs:
     # Deploy to EKS
     - name: Apply Kubernetes manifest
       run: |
+        pwd
+        ls
         kubectl apply -f k8s/deployment.yaml
