@@ -95,7 +95,7 @@ jobs:
       run: |
         pwd
         ls
-        kubectl apply -f deployment.yaml
+        kubectl apply -f deployment.yaml --validate=false
         kubectl get services
         kubectl get pods -o wide
         kubectl get svc
