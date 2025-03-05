@@ -78,7 +78,7 @@ jobs:
       run: |
         pwd
         ls
-        kubectl apply -f k8s/deployment.yaml
+        kubectl apply -f deployment.yaml
         kubectl get services
         kubectl get pods -o wide
         kubectl get svc
