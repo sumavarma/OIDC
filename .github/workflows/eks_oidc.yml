@@ -49,12 +49,12 @@ jobs:
     # Build the Docker image
     - name: Build Docker image
       run: |
-        docker build -t hello-world-image .
+        docker build -t hello-world-image-app .
 
     # Tag the Docker image
     - name: Tag Docker image
       run: |
-        docker tag hello-world-image:latest 225989347065.dkr.ecr.ap-southeast-2.amazonaws.com/hello-world
+        docker tag hello-world-image-app:latest 225989347065.dkr.ecr.ap-southeast-2.amazonaws.com/hello-world
 
     # Push the Docker image to ECR
     - name: Push Docker image to Amazon ECR
