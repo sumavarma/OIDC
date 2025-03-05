@@ -54,12 +54,12 @@ jobs:
     # Tag the Docker image
     - name: Tag Docker image
       run: |
-        docker tag hello-world-image-app:latest 225989347065.dkr.ecr.ap-southeast-2.amazonaws.com/hello-world
+        docker tag hello-world-image-app:latest 225989347065.dkr.ecr.ap-southeast-2.amazonaws.com/hello-worldapp:latest
 
     # Push the Docker image to ECR
     - name: Push Docker image to Amazon ECR
       run: |
-        docker push 225989347065.dkr.ecr.ap-southeast-2.amazonaws.com/hello-world
+        docker push 225989347065.dkr.ecr.ap-southeast-2.amazonaws.com/hello-world-app:latest
 
   deploy:
     name: Deploy to EKS
