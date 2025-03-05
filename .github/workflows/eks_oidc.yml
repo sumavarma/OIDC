@@ -22,8 +22,9 @@ jobs:
       run: |
         echo "GITHUB_REF=${GITHUB_REF}"
         echo "GITHUB_REPOSITORY=${GITHUB_REPOSITORY}"
-
-
+    - name: Inspect OIDC Token
+      run: echo "TOKEN=$(cat /token/path/oidc-token)" >> $GITHUB_ENV
+      
     - name: configure aws credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
