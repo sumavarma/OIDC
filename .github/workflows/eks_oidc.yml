@@ -28,7 +28,10 @@ jobs:
       run: |
         echo "TOKEN=$ACTIONS_ID_TOKEN_REQUEST_TOKEN" >> $GITHUB_ENV
     - name: Debug Environment
-      run: printenv | grep ACTIONS      
+      run: printenv | grep ACTIONS
+    - name: Fetch and Decode OIDC Token
+      run: |
+        curl -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" $ACTIONS_ID_TOKEN_REQUEST_URL
     - name: configure aws credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
