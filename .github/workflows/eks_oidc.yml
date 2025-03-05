@@ -96,7 +96,7 @@ jobs:
         pwd
         ls
         kubectl apply -f deployment.yaml
-        kubectl describe deployment my-app-deployment
+        kubectl describe deployment my-app
         kubectl get services
         kubectl get pods -o wide
         kubectl get svc
